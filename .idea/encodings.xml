@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-eurekaServer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-eurekaServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-ribbon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-zuul/src/main/java" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,7 @@
+# Project exclude paths
+/simple-client/target/
+/simple-core/target/
+/simple-eurekaServer/target/
+/simple-feign/target/
+/simple-ribbon/target/
+/simple-zuul/target/

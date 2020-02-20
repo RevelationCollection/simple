@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="simple-core" />
+        <module name="simple-ribbon" />
+        <module name="simple-zuul" />
+        <module name="simple-client" />
+        <module name="simple-feign" />
+        <module name="config-server" />
+        <module name="simple-eurekaServer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="war" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-server" options="-parameters" />
+      <module name="simple-client" options="-parameters" />
+      <module name="simple-core" options="-parameters" />
+      <module name="simple-eurekaServer" options="-parameters" />
+      <module name="simple-feign" options="-parameters" />
+      <module name="simple-ribbon" options="-parameters" />
+      <module name="simple-zuul" options="-parameters" />
+      <module name="war" options="-parameters" />
+    </option>
+  </component>
+</project>
