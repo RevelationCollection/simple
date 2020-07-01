@@ -17,6 +17,7 @@
         <module>config-server</module>
         <module>config-client</module>
         <module>simple-gateway</module>
+        <module>simple-workky-common</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

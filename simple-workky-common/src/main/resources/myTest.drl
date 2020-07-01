@@ -1,0 +1,58 @@
+package com.pay.union.portrait.core;
+import java.lang.String;
+import java.util.*;
+import com.simple.work.util.drools.bean.RuleObj ;
+
+
+function boolean getCoultReslut(RuleObj obj,String rCode, String num) {
+	if (obj == null || rCode == null) {
+			return false;
+		}
+		Map<String, Object> mapCalc = obj.getRuleDetail();
+		Object object = mapCalc.get("mPosMap");
+		System.out.println("1111");
+		if (object == null) {
+			System.out.println("222");
+			return true;
+		}
+		System.out.println("333");
+	return false;
+}
+
+function boolean testKey(RuleObj data) {
+		if (data == null ) {
+			return false;
+		}
+		Map<String, Object> mapCalc = data.getRuleDetail();
+		Object object = mapCalc.get("first");
+		if(object instanceof Integer){
+            Integer i = (Integer)object;
+            if(i%3==0){
+                return true;
+            }
+        }
+	return false;
+}
+
+rule R00024
+    when
+        eval(true)
+    then
+        System.err.println("hello,word! R00024");
+end
+rule R00026
+    when
+	$c:RuleObj();
+	eval(getCoultReslut($c,"4409","BLUETOOTH"));
+    then
+	$c.setRuleRecords("R00026");
+        System.err.println("hello,word! R00026");
+end
+rule R00027
+    when
+		$c:RuleObj();
+		eval(testKey($c));
+    then
+		$c.setRuleRecords("R00027");
+        System.err.println("hello,word! R00027");
+end
