@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id : customer_client
+          uri: lb://SERVICE-HI
+          order: 0
+          predicates:
+            - Path=/service-hi/**
+          filters:
+            - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+            - StripPrefix=1
+#        - id: default_path_to_http
+#          uri: https://windmt.com
+#          order: 10000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - SetPath=/
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

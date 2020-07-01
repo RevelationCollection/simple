@@ -1,0 +1,17 @@
+要实现高可用的服务注册中心，可以让多台服务注册中心互相注册，比如有三个服务注册中心Server1、Server2、Server3，
+让Server1注册Server2和Server3，同理Server2、Server3分别注册另外两台服务注册中心，然后让Client注册到每个服务注册中心上，例如：
+Server1：
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${Server2IP}:${server2.port}/eureka/,http://${Server3IP}:${server3.port}/eureka/
+
+Client：
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://Server1.ip:server1.port/eureka/,http://Server2.ip:server2.port/eureka/,http://Server3.ip:server3.port/eureka/

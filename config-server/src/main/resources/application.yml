@@ -9,6 +9,10 @@ spring:
       server :
         git:
           uri : https://github.com/RevelationCollection/simple
-          searchPaths : config-server/src/main/resources/
+          searchPaths : config-server/src/test
           username :
           password :
+eureka:
+  client:
+    serviceUrl:
+      defaultZone：http://localhost:8761/eureka/:
